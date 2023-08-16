@@ -1,0 +1,370 @@
+/**/
+
+/*navigation*/
+
+#fixedBar{
+    background-color:#d9d9d9;
+    position:fixed;
+    top: 0;
+    width: 100%;
+    height: 60px;
+}
+
+.navButtons{
+    display:flex;
+    flex-direction: row;
+    width:100%;
+    
+}
+
+.navRight{
+    flex:4;
+    display:flex;
+    align-content: center;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+.removeDefaultStyle{
+    flex:1;
+    width:60px;
+    border: none;
+    background-color: #00ffff00;
+}
+
+/*General*/
+
+/*
+*{
+    border: 1px solid red;
+}
+*/
+
+body{
+    color:rgb(0, 0, 0);
+    margin:0px;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
+    font-size:20px;
+    font-family: 'Barlow', sans-serif;
+}
+
+img{
+    max-width:100%;
+    display:block;
+}
+
+
+h1{
+    font-size:40px;
+    margin:0px;
+}
+
+p{
+    font-weight:200;
+    margin-block:20px;
+}
+
+a{
+    text-decoration:none;
+    cursor: pointer;
+}
+
+.greenText{
+    color:#7EA172;
+}
+
+.blueText{
+    color: #4753DB;
+}
+
+
+.separator {
+    border: none;
+    border-top: 2px solid white;
+    margin: 20px 0;
+}
+
+.section{
+    display:flex;
+    flex-direction: column;
+    background-color:#f8f8f8;
+    align-self:center;
+    width:100%;
+    margin-block:40px;
+    padding-block:30px;
+    /*box-shadow: 12px 12px 10px rgb(0 0 0 / 25%),
+                -5px -5px 5px rgba(255, 255, 255, 0.25);*/
+}
+
+
+.section > .content{
+    margin-block:20px;
+    margin-inline:20px;
+    display:flex;
+    flex-direction: column;
+}
+
+
+.title{
+    width:100%;
+}
+
+/*Greeting*/
+
+#splash{
+    height:80vh;
+    padding-top:20vh;
+}
+
+#jumpToBlog{
+    text-decoration: underline;
+}
+
+#introPicContainer{
+    align-self: center;
+}
+
+#introPic{
+    max-width:321px;
+    max-height:321px;
+}
+
+/*AboutMe*/
+
+#aboutMe{
+    display:flex;
+    flex-direction: column;
+    background-color: none;
+}
+
+#personalSummary{
+    flex:1;
+}
+
+/*Skills*/
+
+#skills{
+    flex:1;
+    display:flex;
+    flex-direction: column;
+    margin-top:15px;
+    align-content: ;
+}
+
+/*  these should be in grid form  */
+.techSkills{
+    display:grid;
+    grid-template-rows: repeat(3,auto);
+    grid-template-columns: repeat(2,auto);
+    justify-items:center;
+    align-content:space-evenly;
+}
+/*  these should flow vertically, could be grid  */
+.techSkill{
+    align-self:center;
+}
+
+/*Projects*/
+
+#projects{
+    background-color: none;
+}
+
+#projectsVert{
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    justify-items:center;
+
+}
+
+.verticalContent{
+    display:flex;
+    flex-direction: column;
+}
+
+.project{
+    margin-bottom:10px;
+}
+
+.projectTitle{
+    margin:0px;
+}
+
+.description{
+    margin:0px;
+}
+
+#Oden{
+    display:none;
+}
+
+.seeMore{
+    display:flex;
+    align-content:center;
+    justify-content: center;
+    margin-top:2em;
+    padding-block:.5em;
+    padding-inline:1em;
+    border: 1px solid #4753DB;
+    font-family: 'Barlow', sans-serif;
+}
+
+/*Blog*/
+
+#blogLatestPosts{
+    background-color: none;
+}
+
+#postsFlow{
+    display:flex;
+    flex-direction:column;
+}
+
+.recentBlogPost{
+    border-radius: 20px;
+    border: 3px solid #958989;
+    margin-block:2vh;
+    padding-inline:2vh;
+    color: #000000;
+    text-decoration: none;
+
+}
+
+.blogTitle{
+    margin-top:20px;
+    margin-bottom: 0px;
+}
+
+.blogTitles{
+    margin-bottom:0px;
+    margin-top:20px;
+    color: #000000;
+}
+
+.blogPostDate{
+    font-size: .5em;
+    margin: 0px;
+}
+
+.blogSpacing{
+    margin: 0px 0px 20px 10px;
+}
+
+/*Contact*/
+
+#contact{
+    background-color: none;
+    margin-bottom:10vh;
+}
+
+#contactForm{
+    display:flex;
+    flex-direction: column;
+    padding:1vh;
+    border: 1px solid white;
+}
+
+#contactVert{
+    display:flex;
+    flex-direction: column;
+}
+
+/* Style autofill appearance for inputs */
+input:-webkit-autofill,
+input:-webkit-autofill:focus {
+  -webkit-text-fill-color: aliceblue; /* Set text color to desired color */
+  transition: background-color 5000s ease-in-out 0s; /* Prevent background color change */
+}
+
+#name, #email, #message{
+    background-color: none;
+    border:none;
+    color:rgb(22 22 22);
+    margin-block:2vh 3vh;
+    width:99%;
+    min-height:auto;
+    font-size: 1em;
+    font-family: 'Barlow', sans-serif;
+}
+
+#name:focus, #email:focus, #message:focus{
+    border: none;
+    outline:none;
+}
+
+#message{
+    height:fit-content;
+}
+
+/* */
+.formError{
+    display: none;
+    color: #503030;
+}
+
+.submit{
+    width: 4em;
+    height: 2em;
+    align-self:center;
+    background:none;
+    font-size:inherit;
+    font-family: 'Barlow', sans-serif;
+}
+
+@media (max-width:360px){
+    #introPicContainer{
+        width:90vw;
+    }
+    #introPic{
+        width:90vw;
+    }
+    .techSkills{
+        grid-template-columns:repeat(1,auto);
+    }
+}
+
+@media (min-width:701px){
+    #fixedBar{
+        display:flex;
+        background-color:#d9d9d9;
+        max-width:780px;
+        align-self:center;
+        padding-inline:15px;
+    }
+
+    #splash{
+        height:100vh;
+        padding-top:0vh;
+        justify-content: center;
+    }
+    
+    #introPicContainer{
+        margin-right:15px;
+    }
+
+    .section{
+        max-width:810px;
+    }
+
+    .section > .content{
+        flex-direction: row;
+        margin-inline:15px;
+    }
+    #welcome{
+        margin-left:15px;
+        max-width:435px;
+    }
+    .content:last-child{
+        margin-left:15px;
+    }
+
+    #skills{
+        margin-top:0px;
+        margin-left:15px;
+    }
+
+}
